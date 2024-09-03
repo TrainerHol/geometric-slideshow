@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Canvas, useThree } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Html } from '@react-three/drei';
 import { useSpring, animated } from '@react-spring/three';
-import * as THREE from 'three';
 import { EffectComposer, Bloom, Vignette } from '@react-three/postprocessing';
 
 // Slide 1: Green wireframe sphere with floating text
@@ -49,11 +48,10 @@ const Slide2 = () => {
 
 // Slide 3: Floating text and spinning red cube
 const Slide3 = () => {
-  const { rotation } = useSpring({
-    from: { rotation: 0 },
-    to: { rotation: Math.PI * 2 },
-    loop: true,
-    config: { duration: 3000 },
+  const [rotation, setRotation] = useState(0);
+
+  useFrame((_, delta) => {
+    setRotation((prev) => prev + delta);
   });
 
   return (
@@ -63,28 +61,27 @@ const Slide3 = () => {
           Floating Text
         </div>
       </Html>
-      <animated.mesh rotation-y={rotation}>
+      <mesh rotation-y={rotation}>
         <boxGeometry args={[1, 1, 1]} />
         <meshBasicMaterial color="red" />
-      </animated.mesh>
+      </mesh>
     </>
   );
 };
 
 // Slide 4: Cube moving up and down
 const Slide4 = () => {
-  const { position } = useSpring({
-    from: { position: [0, -1, 0] },
-    to: { position: [0, 1, 0] },
-    loop: { reverse: true },
-    config: { duration: 2000 },
+  const [position, setPosition] = useState(0);
+
+  useFrame((_, delta) => {
+    setPosition((prev) => Math.sin(prev + delta));
   });
 
   return (
-    <animated.mesh >
+    <mesh position-y={position}>
       <boxGeometry args={[1, 1, 1]} />
       <meshBasicMaterial color="blue" />
-    </animated.mesh>
+    </mesh>
   );
 };
 
@@ -103,7 +100,7 @@ const Slideshow = () => {
   const CurrentSlide = slides[currentSlide];
 
   return (
-    <Canvas>
+    <Canvas frameloop="always">
       <color attach="background" args={['#001a33']} />
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
