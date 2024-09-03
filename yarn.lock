@@ -734,6 +734,17 @@
     suspend-react "^0.1.3"
     zustand "^3.7.1"
 
+"@react-three/postprocessing@^2.16.2":
+  version "2.16.2"
+  resolved "https://registry.yarnpkg.com/@react-three/postprocessing/-/postprocessing-2.16.2.tgz#a6ed5aa0775d843eba845915c41160ce7fff3e79"
+  integrity sha512-2ya1gXLDpzyfbELobi3rPHNNZZCrCfyq20GMYJD1yD7ZyBFSpRG9YSPMBnOal6A89kXanPBw273h6/Dqev0n7g==
+  dependencies:
+    buffer "^6.0.3"
+    maath "^0.6.0"
+    n8ao "^1.6.6"
+    postprocessing "^6.32.1"
+    three-stdlib "^2.23.4"
+
 "@sindresorhus/is@^4.0.0":
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.6.0.tgz#3c7c9c46e678feefe7a2e5bb609d3dbd665ffb3f"
@@ -4291,6 +4302,11 @@ maath@^0.10.7:
   resolved "https://registry.yarnpkg.com/maath/-/maath-0.10.8.tgz#cf647544430141bf6982da6e878abb6c4b804e24"
   integrity sha512-tRvbDF0Pgqz+9XUa4jjfgAQ8/aPKmQdWXilFu2tMy4GWj4NOsx99HlULO4IeREfbO3a0sA145DZYyvXPkybm0g==
 
+maath@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/maath/-/maath-0.6.0.tgz#7841d0fb95bbb37d19b08b7c5458ef70190950d2"
+  integrity sha512-dSb2xQuP7vDnaYqfoKzlApeRcR2xtN8/f7WV/TMAkBC8552TwTLtOO0JTcSygkYMjNDPoo6V01jTw/aPi4JrMw==
+
 make-error@^1.1.1:
   version "1.3.6"
   resolved "https://registry.yarnpkg.com/make-error/-/make-error-1.3.6.tgz#2eb2e37ea9b67c4891f684a1394799af484cf7a2"
@@ -4552,6 +4568,11 @@ multicast-dns@^7.2.5:
   dependencies:
     dns-packet "^5.2.2"
     thunky "^1.0.2"
+
+n8ao@^1.6.6:
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/n8ao/-/n8ao-1.8.4.tgz#763b4f7ce137859408c8c190a6f2188f327d3d46"
+  integrity sha512-xaPub6na6jGAW7rbANcMcnKNhNa3Fmsbe1WY5mzI9bDuBTQmP6X2G1Xq1t2Si8dxJjqYPvNZX3xhXfkNw8jQBQ==
 
 nanoid@^3.3.7:
   version "3.3.7"
@@ -5122,6 +5143,11 @@ postject@^1.0.0-alpha.6:
   integrity sha512-b9Eb8h2eVqNE8edvKdwqkrY6O7kAwmI8kcnBv1NScolYJbo59XUF0noFq+lxbC1yN20bmC0WBEbDC5H/7ASb0A==
   dependencies:
     commander "^9.4.0"
+
+postprocessing@^6.32.1:
+  version "6.36.1"
+  resolved "https://registry.yarnpkg.com/postprocessing/-/postprocessing-6.36.1.tgz#c4aad24e7a5586bc5b6b1a7a92ee1b5d8d79cd11"
+  integrity sha512-V4THKWPZjRUC40OiTWhlzJCWyEkRYeAvMtYVdpi2pcQxAD2qTDm48UB2tZRTW+QdAw80P8Ut7IeKV6J1Gvac9w==
 
 potpack@^1.0.1:
   version "1.0.2"
@@ -6098,7 +6124,7 @@ three-mesh-bvh@^0.7.0:
   resolved "https://registry.yarnpkg.com/three-mesh-bvh/-/three-mesh-bvh-0.7.6.tgz#6764b39475bdba9450ad3a4065492678ee537272"
   integrity sha512-rCjsnxEqR9r1/C/lCqzGLS67NDty/S/eT6rAJfDvsanrIctTWdNoR4ZOGWewCB13h1QkVo2BpmC0wakj1+0m8A==
 
-three-stdlib@^2.29.9:
+three-stdlib@^2.23.4, three-stdlib@^2.29.9:
   version "2.32.2"
   resolved "https://registry.yarnpkg.com/three-stdlib/-/three-stdlib-2.32.2.tgz#ddfbfc6c352b1240cb38121b2b808fa1bde1dcc8"
   integrity sha512-ZN25Na/Xg7APhGKwJ1zhGdhZDsDGGnnm1k5Z+9LLlnfsFye4jigvbN3eA/Ta8hQmBNmEHXoozpmpKK1x8dCePQ==
@@ -6161,7 +6187,7 @@ trim-repeated@^1.0.0:
   dependencies:
     escape-string-regexp "^1.0.2"
 
-troika-three-text@^0.49.0:
+troika-three-text@^0.49.0, troika-three-text@^0.49.1:
   version "0.49.1"
   resolved "https://registry.yarnpkg.com/troika-three-text/-/troika-three-text-0.49.1.tgz#1aaa75337e507ea4120103fb69a5e4687fff97dd"
   integrity sha512-lXGWxgjJP9kw4i4Wh+0k0Q/7cRfS6iOME4knKht/KozPu9GcFA9NnNpRvehIhrUawq9B0ZRw+0oiFHgRO+4Wig==
